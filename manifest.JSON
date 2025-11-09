@@ -1,0 +1,79 @@
+{
+  "name": "RK Fitness App",
+  "short_name": "RK Fitness",
+  "description": "Track BMI, BMR, Body Fat %, Ideal Weight, and WHR with RK Fitness App. Designed for your health and fitness goals.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a002b",
+  "theme_color": "#0f8bff",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "fitness", "utilities"],
+  "dir": "ltr",
+  "lang": "en-US",
+  "id": "rkfitnessapp",
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "1080x1920",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "BMI Calculator",
+      "short_name": "BMI",
+      "description": "Quick BMI check",
+      "url": "./index.html#bmi"
+    },
+    {
+      "name": "BMR Calculator",
+      "short_name": "BMR",
+      "description": "Calculate Basal Metabolic Rate",
+      "url": "./index.html#bmr"
+    },
+    {
+      "name": "Body Fat Calculator",
+      "short_name": "Body Fat",
+      "description": "Estimate body fat percentage",
+      "url": "./index.html#bodyfat"
+    },
+    {
+      "name": "Ideal Weight Calculator",
+      "short_name": "Ideal Weight",
+      "description": "Find your ideal body weight",
+      "url": "./index.html#idealweight"
+    },
+    {
+      "name": "WHR Calculator",
+      "short_name": "WHR",
+      "description": "Waist-to-Hip Ratio calculator",
+      "url": "./index.html#whr"
+    }
+  ],
+  "developer": {
+    "name": "RK Fitness",
+    "url": "https://yourusername.github.io/rk-fitness-app",
+    "email": "rkfitnessapp81@gmail.com"
+  }
+}
