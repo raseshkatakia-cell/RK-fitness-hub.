@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RK Fitness App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#3f0071" />
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash-screen" aria-hidden="true">
+    <img src="logo-512.png" alt="RK Fitness logo" id="splash-logo">
+    <h2>RK Fitness</h2>
+    <div class="spinner" id="splash-spinner" role="status" aria-hidden="true"></div>
+  </div>
+
+  <header class="app-header">
+    <img src="logo-192.png" alt="RK logo" class="app-icon">
+    <div>
+      <h1>RK Fitness App</h1>
+      <p class="publisher">by RK Fitness</p>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Calculators">
+    <button class="tab active" role="tab" onclick="openTab('bmi')">BMI</button>
+    <button class="tab" role="tab" onclick="openTab('bmr')">BMR</button>
+    <button class="tab" role="tab" onclick="openTab('bodyfat')">Body Fat</button>
+    <button class="tab" role="tab" onclick="openTab('ideal')">Ideal Weight</button>
+    <button class="tab" role="tab" onclick="openTab('whr')">WHR</button>
+  </nav>
+
+  <main>
+    <section id="bmi" class="tab-content active" role="tabpanel">
+      <h2>BMI Calculator</h2>
+      <input type="number" id="bmiWeight" placeholder="Weight (kg)" inputmode="decimal">
+      <input type="number" id="bmiHeight" placeholder="Height (cm)" inputmode="decimal">
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <p id="bmiResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <section id="bmr" class="tab-content" role="tabpanel" hidden>
+      <h2>BMR Calculator</h2>
+      <input type="number" id="bmrWeight" placeholder="Weight (kg)">
+      <input type="number" id="bmrHeight" placeholder="Height (cm)">
+      <input type="number" id="bmrAge" placeholder="Age (years)">
+      <select id="bmrGender"><option value="male">Male</option><option value="female">Female</option></select>
+      <button onclick="calculateBMR()">Calculate BMR</button>
+      <p id="bmrResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <section id="bodyfat" class="tab-content" role="tabpanel" hidden>
+      <h2>Body Fat % (U.S. Navy)</h2>
+      <select id="bfGender"><option value="male">Male</option><option value="female">Female</option></select>
+      <input type="number" id="bfHeight" placeholder="Height (cm)">
+      <input type="number" id="bfNeck" placeholder="Neck (cm)">
+      <input type="number" id="bfWaist" placeholder="Waist (cm)">
+      <input type="number" id="bfHip" placeholder="Hip (cm) - females only">
+      <button onclick="calculateBodyFat()">Calculate Body Fat %</button>
+      <p id="bfResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <section id="ideal" class="tab-content" role="tabpanel" hidden>
+      <h2>Ideal Weight (Devine)</h2>
+      <select id="iwGender"><option value="male">Male</option><option value="female">Female</option></select>
+      <input type="number" id="iwHeight" placeholder="Height (cm)">
+      <button onclick="calculateIdealWeight()">Calculate Ideal Weight</button>
+      <p id="iwResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <section id="whr" class="tab-content" role="tabpanel" hidden>
+      <h2>Waist-Hip Ratio (WHR)</h2>
+      <input type="number" id="whrWaist" placeholder="Waist (cm)">
+      <input type="number" id="whrHip" placeholder="Hip (cm)">
+      <button onclick="calculateWHR()">Calculate WHR</button>
+      <p id="whrResult" class="result" aria-live="polite"></p>
+    </section>
+
+    <div style="max-width:420px;margin:18px auto;text-align:center">
+      <button class="share-btn" onclick="shareApp()">Share App</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 RK Fitness | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
